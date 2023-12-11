@@ -1,0 +1,867 @@
+
+Welcome to BigQuery! This script will walk you through the 
+process of initializing your .bigqueryrc configuration file.
+
+First, we need to set up your credentials if they do not 
+already exist.
+
+Credential creation complete. Now we will select a default project.
+
+List of projects:
+   #              projectId                       friendlyName           
+ ----- -------------------------------- -------------------------------- 
+  1     sys-03370221947529396741814785   AWS TakeOn                      
+  2     sys-48323589923680691214829144   AWS TakeOn                      
+  3     sys-09544721430391922856325894   AWS TakeOn                      
+  4     sada-iyke                        sada-iyke                       
+  5     tnt5-pqw3t6                      tnt5-pqw3t6                     
+  6     tnt3-wcfyna                      tnt3-wcfyna                     
+  7     sada-workspot-sbx                sada-workspot-sbx               
+  8     sada-workspot-gmad-sbx           sada-workspot-gmad-sbx          
+  9     infosec-tool-integration         infosec-tool-integration        
+  10    sada-sachin-savaniya-sandbox     sada-sachin-savaniya-sandbox    
+  11    sys-17054165428010554781865459   AWS TakeOn                      
+  12    automate-ws-alias                automate-ws-alias               
+  13    sada-lookout-poc                 sada-lookout-poc                
+  14    arista-networks-genai-poc        arista-networks-genai-poc       
+  15    sada-josee-mbunwe-service-prj    sada-josee-mbunwe-service-prj   
+  16    sys-44407902260888746370278129   Review Checklist - Cloud Secur  
+  17    rk-sanbox                        rk-sanbox                       
+  18    sada-lookout                     sada-lookout                    
+  19    ane-maps-usage-prod              ane-maps-usage-prod             
+  20    aca-maps-usage-prod              aca-maps-usage-prod             
+  21    aca-maps-prod                    aca-maps-prod                   
+  22    ane-maps-prod                    ane-maps-prod                   
+  23    ane-maps-dev                     ane-maps-dev                    
+  24    aca-maps-dev                     aca-maps-dev                    
+  25    sada-fabian-duarte               sada-fabian-duarte              
+  26    sada-leilani-alvarez             sada-leilani-alvarez            
+  27    sada-proserv-eng-profile         sada-proserv-eng-profile        
+  28    sys-28334190648396808056239850   Review Checklist - Cloud Secur  
+  29    sys-38967711620996212833062286   AWS TakeOn                      
+  30    sys-07966672332770838371185817   Review Checklist - Cloud Secur  
+  31    shreys-sandbox                   shrey's-sandbox                 
+  32    sada-oz-oral-demo                sada-oz-oral-demo               
+  33    sequoia-capital-20231031         sequoia-capital-20231031        
+  34    troys-sharedvpc                  sharedvpc                       
+  35    cscashby-dialogflow-cx-sandbox   cscashby-dialogflow-cx-sandbox  
+  36    sada-aaron-brock-alt             sada-aaron-brock-alt            
+  37    chendrich-gke-14                 chendrich-gke-14                
+  38    looker-support-project           Looker Support Project          
+  39    chris-nazarian-test-2023         Chris Nazarian Test 2023        
+  40    sys-67730231404247818356820525   Review Checklist - Cloud Secur  
+  41    sada-looker-studio-pro           sada-looker-studio-pro          
+  42    sada-mde-demo                    sada-mde-demo                   
+  43    sys-53293744478606156884883140   Review Checklist - Cloud Secur  
+  44    sys-11334146761539873797800749   Review Checklist - Cloud Secur  
+  45    tnt5-zhy02s                      tnt5-zhy02s                     
+  46    sada-aman-jain-sandbox2          sada-aman-jain-sandbox2         
+  47    paperspace-digitalocean-090223   paperspace-digitalocean-090223  
+  48    cimpress-schweiz-gmbh-20230928   cimpress-schweiz-gmbh-20230928  
+  49    felipe-mulford-sandbox           felipe-mulford-sandbox          
+  50    saas-elevator                    saas-elevator                   
+  51    saas02-anthos-hub                saas02-anthos-hub               
+  52    saas02-freemium-prj              saas02-freemium-prj             
+  53    saas02-admin-host                saas02-admin-host               
+  54    saas01-admin-host                saas01-admin-host               
+  55    saas-seed-prj-sada               saas-seed-prj-sada              
+  56    chendrich-cloudrun               chendrich-cloudrun              
+  57    sys-25071351516588668503560335   AWS TakeOn                      
+  58    sys-53799127430057504099972361   AWS TakeOn                      
+  59    sys-30688034806551231037230911   AWS TakeOn                      
+  60    sada-wsp-scripting               sada-wsp-scripting              
+  61    sys-17977481375749097742036667   Review Checklist - Cloud Secur  
+  62    sys-53933927172409735628307933   Review Checklist - Cloud Secur  
+  63    sys-67325086628618856106272245   Review Checklist - Cloud Secur  
+  64    sys-90304796528073850224613059   AWS TakeOn                      
+  65    sys-78534915942715308598801073   AWS TakeOn                      
+  66    sys-12558431570154016202617608   AWS TakeOn                      
+  67    sada-deepti-madhwani-sandbox     sada-deepti-madhwani-sandbox    
+  68    dev-arvest-msg-conversion        dev-arvest-msg-conversion       
+  69    sada-amit-jaiswal-sandbox        sada-amit-jaiswal-sandbox       
+  70    appdev-duet-ai                   appdev-duet-ai                  
+  71    sys-81170165827024199958602097   AWS TakeOn                      
+  72    fb-prj-poc-2                     fb-prj-poc-2                    
+  73    fb-prj-poc-1                     fb-prj-poc-1                    
+  74    sys-55302528617346599400047752   AWS TakeOn                      
+  75    sys-83854735942021259762082305   Review Checklist - Cloud Secur  
+  76    sada-hycu-appeng-rcloud          sada-hycu-appeng-rcloud         
+  77    sada-marketplace-elevate         sada-marketplace-elevate        
+  78    sada-seed-2023                   sada-seed-2023                  
+  79    jorge-test-network               jorge-test-network              
+  80    jorge-test-394916                jorge-test                      
+  81    sada-mehran-sandbox              sada-mehran-sandbox             
+  82    sada-boris-sandbox               sada-boris-sandbox              
+  83    sys-25370967889347345984784643   Review Checklist - Cloud Secur  
+  84    sys-94966132534096054812487384   Review Checklist - Cloud Secur  
+  85    sada-mueller-sandbox             sada-mueller-sandbox            
+  86    sada-se-feedback-prod            sada-se-feedback-prod           
+  87    sada-next-app-dev-demo           sada-next-app-dev-demo          
+  88    ets-workspace-api-dev            ets-workspace-api-dev           
+  89    sada-decusatio                   sada-decusatio                  
+  90    sys-63686361055631863002934235   Copy of Netsuite Pipeline Time  
+  91    sada-nw-service-pro2             sada-nw-service-pro2            
+  92    sada-nw-service-pro1             sada-nw-service-pro1            
+  93    sada-nw-host                     sada-nw-host                    
+  94    sys-34661176825413993883019246   Slides demo                     
+  95    coordinate-uat                   coordinate-uat                  
+  96    coordinate-prod                  coordinate-prod                 
+  97    sada-vimal-kumar-sandbox         sada-vimal-kumar-sandbox        
+  98    sys-27576348030603955209950555   Review Checklist - Cloud Secur  
+  99    sada-edw-project-02              sada-edw-project-02             
+  100   sada-edw-project-01              sada-edw-project-01             
+  101   servicenow-itom-discovery        servicenow-itom-discovery       
+  102   sada-gcve-train2                 sada-gcve-train2                
+  103   sada-gcve-train1                 sada-gcve-train1                
+  104   abi-service-proj-2               abi-service-proj-2              
+  105   abi-service-proj-1               abi-service-proj-1              
+  106   taylor-cloudbuild                taylor-cloudbuild               
+  107   sada-jmy-sbx-2023                sada-jmy-sbx-2023               
+  108   sada-it-monitoring-alerting      sada-it-monitoring-alerting     
+  109   sada-pc-sandbox                  sada-pc-sandbox                 
+  110   sada-abdurahman-salim-sandbox    sada-abdurahman-salim-sandbox   
+  111   sada-lekshmi-nair-sandbox        sada-lekshmi-nair-sandbox       
+  112   miguel-izaga-sandbox             miguel-izaga-sandbox            
+  113   montoya-mp-test                  montoya-mp-test                 
+  114   sada-cto-data-carpentry          sada-cto-data-carpentry         
+  115   cto-testing-gen-ai               sada-cto-gen-ai                 
+  116   turner-ind-20230428              turner-ind-20230428             
+  117   sys-19982212655779594915176953   Review Checklist - Cloud Secur  
+  118   sys-68484709456429983845715174   Review Checklist - Cloud Secur  
+  119   sys-26675405179529760370035946   Review Checklist - Cloud Secur  
+  120   sada-genai-preview               sada-genai-preview              
+  121   sada-galactic-clouds             sada-galactic-clouds            
+  122   corp-temporall                   corp-temporall                  
+  123   sada-gcve-vpcsc                  sada-gcve-vpcsc                 
+  124   sada-gcve-publicpr2              sada-gcve-publicpr2             
+  125   sys-22864684464939349223723604   Review Checklist - Cloud Secur  
+  126   sada-db-sandbox-01               sada-db-sandbox-01              
+  127   sada-spiff                       sada-spiff                      
+  128   sada-dialogflow-cx-preview       sada-dialogflow-cx-preview      
+  129   sada-jp-dms-aws-test-poc-dt      sada-jp-dms-aws-test-poc-dt     
+  130   sada-ls-sandbox                  sada-ls-sandbox                 
+  131   sada-janice-sandbox              sada-janice-sandbox             
+  132   corp-gooda-dev                   corp-gooda-dev                  
+  133   sada-oef-metrics-prod            sada-oef-metrics-prod           
+  134   sys-46682142869990792245671292   Review Checklist - Cloud Secur  
+  135   sys-54193240909170905488318931   Review Checklist - Cloud Secur  
+  136   sada-newrelic-demo               sada-newrelic-demo              
+  137   sys-38338937944383184247866915   Review Checklist - Cloud Secur  
+  138   sys-99156949285543653409890795   AWS Consolidated View Create    
+  139   sys-21527610658069588108270065   DT Billing Export               
+  140   sys-17243789161892018096745607   Review Checklist - Cloud Secur  
+  141   corp-gooda                       corp-gooda                      
+  142   chendrich-con-edge-1             chendrich-con-edge-1            
+  143   anurag-sharma-sandbox            anurag-sharma-sandbox           
+  144   sada-edw-sendgrid-prod           sada-edw-sendgrid-prod          
+  145   sys-72836089857160357127242681   Review Checklist - Cloud Secur  
+  146   migration-378016                 migration                       
+  147   sada-skynet-dev                  sada-skynet-dev                 
+  148   sada-excel-to-sheets             sada-excel-to-sheets            
+  149   sada-gps-deployment              sada-gps-deployment             
+  150   sada-simons-sandbox              sada-simons-sandbox             
+  151   sada-proserve-data               sada-proserve-data              
+  152   sys-99560841652646756876442708   Review Checklist - Cloud Secur  
+  153   sada-keith-sandbox3              sada-keith-sandbox3             
+  154   sada-keith-sandbox2              sada-keith-sandbox2             
+  155   sada-cto-data                    sada-cto-data                   
+  156   anupam-mishra-sandbox            anupam-mishra-sandbox           
+  157   sys-34070398171878161526646268   Review Checklist - Cloud Secur  
+  158   sys-62171684487409911284015404   Review Checklist - Cloud Secur  
+  159   sada-demo-haus                   sada-demo-haus                  
+  160   sys-14655169836317100418896773   Review Checklist - Cloud Secur  
+  161   sys-75147910512228618853276626   Review Checklist - Cloud Secur  
+  162   panick-sandbox-20221229          Nick Pan Sandbox                
+  163   gdc-edge-apps-372514             gdc-edge-apps                   
+  164   proserve-targeting               proserve-targeting              
+  165   sys-24202236486591430355481512   Review Checklist - Cloud Secur  
+  166   sada-content-ai-dev              sada-content-ai-dev             
+  167   sys-31681881594804818457936748   Review Checklist - Cloud Secur  
+  168   the-cloud-circus                 the-cloud-circus                
+  169   romesh-sandbox-prj               romesh-sandbox-prj              
+  170   sys-08300798272616077667565566   Review Checklist - Cloud Secur  
+  171   nitin-dashboard-testing          nitin-dashboard-testing         
+  172   sada-ns-monday-prod              SADA NS to Monday Sync          
+  173   sys-47779877627559185600063577   Review Checklist - Cloud Secur  
+  174   sys-16984113334780038898209298   Review Checklist - Cloud Secur  
+  175   sys-90234192145853271361215164   Review Checklist - Cloud Secur  
+  176   sys-49043806591126696763206563   Review Checklist - Cloud Secur  
+  177   santosh-sandbox-370907           santosh-sandbox                 
+  178   satya-sandbox-test               Satya Sandbox Test              
+  179   sys-65570434175376601033063036   Review Checklist - Cloud Secur  
+  180   sada-provisioner-prod            sada-provisioner-prod           
+  181   julies-sandbox                   Julie's Sandbox                 
+  182   sada-g-gdc-edge-ha               SADA Google GDC Edge HA         
+  183   mmllc-demo-testing               mmllc-demo-testing              
+  184   sada-scc-findings-nonprod        SADA SCC Findings Non Prod      
+  185   gt-project-sandbox-01-370118     gt-project-sandbox-01           
+  186   shreya-sand-box                  shreya sand-box                 
+  187   anand-sai-sbx                    anand-sai-sbx                   
+  188   sys-49978718484232378338617170   new monday copy                 
+  189   jmairaj-nonprod-spoke1           jmairaj-nonprod-spoke1          
+  190   jmairaj-nonprod-hub              jmairaj-nonprod-hub             
+  191   newrelic-poc                     NewRelic-POC                    
+  192   sys-02701119916283454321098032   monday com                      
+  193   homeatest                        homeatest                       
+  194   new-relic-poc                    new-relic-POC                   
+  195   sada-rapid7-dev                  sada-rapid7-dev                 
+  196   sada-eva-sandbox-369421          sada-eva-sandbox                
+  197   sada-meraki-logs-prod            sada-meraki-logs-prod           
+  198   sys-09167615384588164700322245   Monday                          
+  199   sys-54169690354298236516688469   Monday                          
+  200   adam-nonprod-data                adam-nonprod-data               
+  201   nicky-joeproto                   nicky-joeproto                  
+  202   snhu-toboggan-poc-demo           snhu-toboggan-poc-demo          
+  203   dillards-retail-search-dev       dillards-retail-search-dev      
+  204   sada-openvpn-prod                sada-openvpn-prod               
+  205   multimedia-llc-demo              Multimedia-LLC-demo             
+  206   sada-borisk-sharedhost           sada-borisk-sharedhost          
+  207   saepio                           saepio                          
+  208   sada-chronicle-forwarder-prod    sada-chronicle-forwarder-prod   
+  209   sadaindia-poc-infra-1700         sadaindia-poc-infra-1700        
+  210   sys-67482994913984973775027666   Review Checklist - Cloud Secur  
+  211   sys-61286489880492173656232000   Review Checklist - Cloud Secur  
+  212   sys-69044327120660621638404909   Review Checklist - Cloud Secur  
+  213   sys-60403699422037963956159007   Review Checklist - Cloud Secur  
+  214   sys-97064994455114914190100668   Review Checklist - Cloud Secur  
+  215   serverless-spark-learning        serverless-spark-learning       
+  216   george-alonge-sandbox-02         george-alonge-sandbox           
+  217   jeremyh-cloudrun-metrics-test    jeremyh-cloudrun-metrics-test   
+  218   mohsin-sandbox-367217            mohsin-sandbox                  
+  219   nitin-raj-primary-367216         nitin-raj-primary               
+  220   alainbaxter-gke-lab              alainbaxter-gke-lab             
+  221   sd-proj-7-366823                 sd-proj-7                       
+  222   svcp-app2                        svcp-app2                       
+  223   svcp-app1                        svcp-app1                       
+  224   tam-budget-manager               tam-budget-manager              
+  225   sada-borisk-apigeex-sbx          sada-borisk-apigeex-sbx         
+  226   my-org-svc-project               my-org-svc-project              
+  227   my-org-host-project              my-org-host-project             
+  228   new-york-state-10212022          new-york-state-10212022         
+  229   sada-org-logging-prod            sada-org-logging-prod           
+  230   shubhra-ghosh-sandbox            shubhra-ghosh-sandbox           
+  231   rg-test01                        rg-test01                       
+  232   arcserve-openstack-tes-bed       arcserve-openstack-tes-bed      
+  233   satya-sandbox-dev                Satya Sandbox Dev               
+  234   expel-sandbox                    expel-sandbox                   
+  235   sada-stark-shared                sada-stark-shared               
+  236   source-prj-365623                source-prj                      
+  237   caty-sandbox                     caty-sandbox                    
+  238   sys-96783977337472164906126882   TAM Tracker Updater             
+  239   sada-shubhag-saxena-sandbox      SADA Shubhag Saxena sandbox     
+  240   sada-stark-stage                 sada-stark-stage                
+  241   sada-stark-dev                   sada-stark-dev                  
+  242   sada-stark-prod                  sada-stark-prod                 
+  243   sada-ccai-platform-demo          SADA-CCAI-Platform-Demo         
+  244   nilesh-sada-internal-sandbox     nilesh-sada-internal-sandbox    
+  245   rc-nonprod-x-9d0b                rc-nonprod-x                    
+  246   sys-64848793687738376554580733   Review Checklist - Cloud Secur  
+  247   mikelaramie-sandbox              sada-mike-laramie               
+  248   bq-dev-364413                    bq-dev                          
+  249   sys-96153348479340963656644440   Review Checklist - Cloud Secur  
+  250   sys-65825212306052872521699921   Review Checklist - Cloud Secur  
+  251   sys-50306145720344886117417781   Review Checklist - Cloud Secur  
+  252   sys-48700901415520558703920624   Review Checklist - Cloud Secur  
+  253   pfenech-dev                      pfenech-dev                     
+  254   sys-57712372828372365032617806   TAM Tracker Updater             
+  255   snhu-poc-gdrive-cdn-demo         snhu-poc-gdrive-cdn-demo        
+  256   sada-jwhite-sandbox              sada-jwhite-sandbox             
+  257   guzman-host-project-94248        guzman host project 94248       
+  258   skills-base-dev                  skills-base-dev                 
+  259   jason-brancazio-sandbox-13       jason-brancazio-sandbox-13      
+  260   sada-chendrich-sd-shield-test    sada-chendrich-sd-shield-test   
+  261   jhannan-firebase-dev             jhannan-firebase-dev            
+  262   taylor-fleet                     taylor-fleet                    
+  263   chris-terry-dev                  Chris Terry Dev                 
+  264   sd-proj-6-362515                 sd-proj-6                       
+  265   sada-ds-ops-dev-x                sada-ds-ops-dev-x               
+  266   sada-kumud-chauhan-sandbox       SADA Kumud Chauhan sandbox      
+  267   natea-dev                        natea-dev                       
+  268   anthos-361920                    anthos                          
+  269   lab-event-creator                lab-event-creator               
+  270   broad-institute-acct-tools       broad-institute-acct-tools      
+  271   sada-keith-sandbox               sada-keith-sandbox              
+  272   saad-ansari-sandbox              saad-ansari-sandbox             
+  273   nll-voice-demo                   nll-voice-demo                  
+  274   majestic-nimbus-361219           My Project 53723                
+  275   dora-demo-361210                 DORA-demo                       
+  276   chatbot-proto-361120             chatbot-proto                   
+  277   sys-18823007592762882421505302   Review Checklist - Cloud Secur  
+  278   scc-slack-notifier               SCC-Slack-notifier              
+  279   sada-gps-cm-chatbot              CM Content Summit               
+  280   pin-km-sandbox                   pin-km-sandbox                  
+  281   sada-ds-ops-x                    sada-ds-ops-x                   
+  282   sada-corp-keys-prod              sada-corp-keys-prod             
+  283   prabha-cortex-test               prabha-cortex-test              
+  284   sustainit-internal               SustainIT-Internal              
+  285   dataplexdemo-360914              DataplexDemo                    
+  286   abiodun-ajibola                  Abiodun Ajibola                 
+  287   ashish-sandbox-360605            ashish-sandbox                  
+  288   sada-vdi-prod                    sada-vdi-prod                   
+  289   nextfire-app-baf17               nextfire-app                    
+  290   vpn-test-360518                  vpn-test                        
+  291   external-billing-landing-zone    external-billing-landing-zone   
+  292   sada-seed-chatbot                chatness-everbot                
+  293   recognize-360419                 Recognize                       
+  294   sky-sada-ml                      sky-sada-ml                     
+  295   chatness-everbot                 sandbox                         
+  296   fredrick-sachita-sandbox         fredrick-sachita-sandbox        
+  297   privatbank-360413                privatbank                      
+  298   tam-lab-provisioner              tam-lab-provisioner             
+  299   sada-data-fivetran-x             sada-data-fivetran-x            
+  300   carrousel-360218                 Carrousel                       
+  301   montoya-sandbox                  montoya-sandbox                 
+  302   gk-delete                        gk-delete                       
+  303   sada-data-stitch-x               sada-data-stitch-x              
+  304   sys-14987685099803838851406664   who-bot                         
+  305   adwords-marketing                adwords-marketing               
+  306   sada-tirayr                      sada-tirayr                     
+  307   brettdorseysandbox               brettdorseysandbox              
+  308   danbergman-sandbox               danbergman-sandbox              
+  309   birm-project-1                   birm-project-1                  
+  310   sys-26291264129425580871254197   Refresh Application             
+  311   ruhan-budget-demo                ruhan-budget-demo               
+  312   blake-nonprod                    Blake-nonprod                   
+  313   sys-70845101793829321604883512   Review Checklist - Cloud Secur  
+  314   lucid-scale-query                lucid-scale-query               
+  315   non-prod-gaurav-maheshwari       non-prod-gaurav-maheshwari      
+  316   cpresley                         cpresley                        
+  317   david-tessier-sandbox            david-tessier-sandbox           
+  318   sys-70968560549473122000548797   TAM Tracker Updater             
+  319   sanboxanand                      sanboxanand                     
+  320   sada-gcve-publicpr               sada-gcve-publicpr              
+  321   cloud-function-test-358200       Cloud Function Test             
+  322   sada-vivek-singh-sandbox         SADA ESS vivek singh SANDBOX    
+  323   sada-knowledge-assist            sada-knowledge-assist           
+  324   rgregory-sandbox                 rgregory-sandbox                
+  325   sadaindia-tvm-poc-de             sadaindia-tvm-poc-de            
+  326   singlalikhita-sandbox            singlalikhita-sandbox           
+  327   signature-bank-oauth-prod        signature-bank-oauth-prod       
+  328   sshehtou-sandbox                 sshehtou-sandbox                
+  329   host-project-357115              host-project                    
+  330   docai-cdw-test                   DocAI CDW Test                  
+  331   mikedlab                         mikedlab                        
+  332   ujet-dialogflow-bot-demo         ccaip-dialogflow-bot-demo       
+  333   guzman-sandbox-52058             Guzman Sandbox 52058            
+  334   recaptcha-ent-demo               reCAPTCHA-ENT-demo              
+  335   rk-sandbox-356819                rk-sandbox                      
+  336   sys-33945402488460592536099705   Review Checklist - Cloud Secur  
+  337   arman-sandbox                    arman-sandbox                   
+  338   cashby-sandbox                   cashby-sandbox                  
+  339   sada-marekanderson-quicktest     sada-marekanderson-quicktest    
+  340   jfloyd-sandbox                   jfloyd-sandbox                  
+  341   gcp-cloudresources-project       gcp-cloudresources-project      
+  342   sys-07687968102453526497238149   Review Checklist - Cloud Secur  
+  343   sys-41591659061900471494224957   Review Checklist - Cloud Secur  
+  344   sys-10489837415535871914853409   Review Checklist - Cloud Secur  
+  345   nora-anazia-test                 Nora Anazia Test                
+  346   cvlasaty-dev                     cvlasaty-dev                    
+  347   sada-beaver                      sada-beaver                     
+  348   sada-jmy-kafka                   sada-jmy-kafka                  
+  349   gk-main-356021                    gk-main-356021                 
+  350   cspr-script-pr-test              cspr-script-pr-test             
+  351   taylor-monitoring-solution       taylor-monitoring-solution      
+  352   sada-seed-chatbot-prod           sada-seed-chatbot-prod          
+  353   sada-william-forson-dev          sada-william-forson-dev         
+  354   sada-ccai-platform-sandbox       SADA-CCAI-Platform-Sandbox      
+  355   kevin-sandbox-355300             kevin-sandbox                   
+  356   sada-anaheim-test                sada-anaheim-test               
+  357   skocheran-nonprod                SKocheran-NonProd               
+  358   sada-mediacdn-lab-01-dev         sada-mediacdn-lab-01-dev1       
+  359   sada-chendrich-crossplane-base   sada-chendrich-crossplane-base  
+  360   syndeo-test-354321               syndeo-test                     
+  361   project-sinkhole                 project-sinkhole                
+  362   sada-gokul-dev                   Sada-gokul-Dev                  
+  363   anf-dev-prod-1                   anf-dev-prod-1                  
+  364   sada-jmy-demo                    sada-jmy-demo                   
+  365   midyear-gist-354121              jono-bce-demo                   
+  366   a-ryan-bradley-bce-demo          a-ryan-bradley-bce-demo         
+  367   csprv2-image                     csprv2-image                    
+  368   windows-connector-testing        windows-connector-testing       
+  369   sys-96709017791555092549600345   Review Checklist - Cloud Secur  
+  370   jay-sada                         Jay-sada                        
+  371   ramonkidd-sandbox                ramonkidd-sandbox               
+  372   aruna-sandbox                    Aruna-Sandbox                   
+  373   sys-23894630209862861482106050   Scenarios                       
+  374   kpatel-nonprod-2                 kpatel-nonprod-2                
+  375   imposing-pipe-353221             demo-sharedvpc-service-project  
+  376   shaped-manifest-353221           demo-sharedvpc-host-project     
+  377   sys-60611124937644367084719584   BQFunctions                     
+  378   stan-chat-bot                    stan-chat-bot                   
+  379   anf-dev-host-nonprod-1           anf-dev-host-nonprod-1          
+  380   anf-dev-hub-1                    anf-dev-hub-1                   
+  381   alloy-test-352901                Alloy Test                      
+  382   sd-proj-8                        sd-proj-8                       
+  383   test-project-352819              test-project                    
+  384   sada-broad-test-project          sada-broad-test project         
+  385   prabha-de-sandbox                prabha-de-sandbox               
+  386   snhu-toboggan-dev                snhu-toboggan-dev               
+  387   kdeadwylier-sandbox              kdeadwylier-sandbox             
+  388   sada-marek-anderson-lab          sada-marek-anderson-lab         
+  389   sd-proj-7                        sd-proj-7                       
+  390   wattsmd-nonprod                  wattsmd-nonprod                 
+  391   mfrench-sandbox                  mfrench-sandbox                 
+  392   rohan-orbit                      rohan-orbit                     
+  393   newhorizons-stage                newhorizons-stage               
+  394   firebase-hareesh                 firebase-hareesh                
+  395   sd-proj-6                        sd-proj-6                       
+  396   sada-chronicle-prod              Sada-Chronicle-Prod             
+  397   sada-lmfs-dev                    SADA LMFS Dev                   
+  398   sada-lmfs-demo                   SADA LMFS Demo                  
+  399   mrayos-nonprod                   mrayos-nonprod                  
+  400   rd-infra-tf-test-chendrich-1     rd-infra-tf-test-chendrich-1    
+  401   minab-ddf-sandbox                MinaB-DDF-Sandbox               
+  402   whh-assured-workload-sandbox     whh-assured-workload-sandbox    
+  403   gautam-sb-2                      gautam-sb-2                     
+  404   jimbooth-dev                     jimbooth-dev                    
+  405   jimbooth-prod                    jimbooth-prod                   
+  406   barclays-multiverse              barclays-multiverse             
+  407   sys-93508877110286146162334532   TAM Tracker Updater             
+  408   sys-31897757573820349814894976   TAM Tracker Updater             
+  409   janet-demoproj-v01               Janet-DemoProj-V01              
+  410   rd-infra-network-test            rd-infra-network-test           
+  411   sada-vm-sandbox1                 sada-vm-sandbox1                
+  412   coordinate-septa                 coordinate-septa                
+  413   sada-clh-chronicle-dev           sada-clh-chronicle-dev          
+  414   geolocator-349807                geolocator                      
+  415   adam-nonprod-shared              adam-nonprod-shared             
+  416   sada-snow-wsp-spoke-prod         sada-snow-wsp-spoke-prod        
+  417   sada-rahulvangala-sandbox        sada-rahulvangala-sandbox       
+  418   wynn-resorts-cloudfoundation     wynn-resorts-cloudfoundation    
+  419   corp-pronto                      corp-pronto                     
+  420   sys-78944708304245618887203912   Review Checklist - Cloud Secur  
+  421   sys-20247665956460616250194599   Review Checklist - Cloud Secur  
+  422   jimbooth1                        jimbooth1                       
+  423   adam-nonprod                     adam-nonprod                    
+  424   veer-sandbox                     Veer-sandbox                    
+  425   jgiglio-nonprod                  jgiglio-nonprod                 
+  426   rahul-sandbox-project            rahul-sandbox-project           
+  427   sada-billing-dashboard           sada-billing-dashboard          
+  428   mikhail-sandbox-348422           mikhail-sandbox                 
+  429   jmairaj-nonprod                  jmairaj-nonprod                 
+  430   locked-sandbox                   locked-sandbox                  
+  431   jeremy-monitoring-workspace      jeremy-monitoring-workspace     
+  432   sada-it-storage                  sada-it-storage                 
+  433   sada-garima-srivastav-sandbox    SADA garima srivastav sandbox   
+  434   t567890                          darshi-python                   
+  435   gcve-lab-01                      GCVE-Lab-01                     
+  436   corp-skyrise-access              corp-skyrise-access             
+  437   darshi-gke                       darshi-gke                      
+  438   ccollins-dev-01                  ccollins-dev-01                 
+  439   darshi-test                      darshi-test                     
+  440   esanchez-sandbox                 esanchez-sandbox                
+  441   hsoto-nonprod                    hsoto-nonprod                   
+  442   sada-anthony-test                sada-anthony-test               
+  443   subash-sandbox                   subash-sandbox                  
+  444   whh-sandbox                      whh-sandbox                     
+  445   jp-sandbox-ya-know               jp-sandbox-ya-know              
+  446   ruhan-sandcastle                 ruhan-sandcastle                
+  447   mike-mastrogiacomo               Mike Mastrogiacomo              
+  448   gautam-sandbox-346302            gautam-sandbox                  
+  449   coordinate-king                  coordinate-king                 
+  450   taylor-lab                       taylor-lab                      
+  451   sys-56403901667972805464493022   Test Proj                       
+  452   sada-thomas-chen-sandbox         SADA thomas chen sandbox        
+  453   sada-randy-neil-sandbox          SADA randy neil sandbox         
+  454   sada-justin-rudio-sandbox        SADA justin rudio sandbox       
+  455   sada-josee-mbunwe-sandbox        SADA josee mbunwe sandbox       
+  456   sada-cristian-gonzalez-sandbox   SADA cristian gonzalez sandbox  
+  457   sada-aref-amiri-sandbox          SADA aref amiri sandbox         
+  458   sada-awadis-shikoyan-sandbox     vahan-net-test                  
+  459   sada-vahan-yeghiazaryan-sanbox   vahan-gam-vms                   
+  460   sada-kurien-thomas-sandbox       SADA kurien thomas sandbox      
+  461   sada-alok-singh-sandbox          SADA alok singh sandbox         
+  462   pierigs-sandbox                  pierigs-sandbox                 
+  463   gchat-org-policy-lurker          gchat-org-policy-lurker         
+  464   asfar-shah-sandbox               asfar-shah-sandbox              
+  465   sada-ts-prod                     sada-ts-prod                    
+  466   sys-47068932791609800990077331   Review Checklist - Cloud Secur  
+  467   cook-nonprod                     cook-nonprod                    
+  468   my-project-16793-345218          My Project 16793                
+  469   mci-vs-td                        mci-vs-td                       
+  470   caa-map-services                 caa-map-services                
+  471   netsuiteopps                     netsuiteopps                    
+  472   sys-68142964868098678633890257   Review Checklist - Cloud Secur  
+  473   sys-04618752269059780131101443   Review Checklist - Cloud Secur  
+  474   sadavasttesting                  sadavasttesting                 
+  475   mikelab                          mikelab                         
+  476   it-forensic-lab                  IT-forensic-lab                 
+  477   sys-60265164957692945152490574   Review Checklist - Cloud Secur  
+  478   sys-90097599578798811011391829   Review Checklist - Cloud Secur  
+  479   bi-eng-internal                  bi-eng-internal                 
+  480   sys-28684158154892788593843211   Refresh Application             
+  481   ci-cd-test-343601                ci-cd-test                      
+  482   sada-jatencio-sandbox-onprem     sada-jatencio-sandbox-onprem    
+  483   a-ryan-bradley-sandbox           a-ryan-bradley-sandbox          
+  484   sada-hareesh-mannaru-sandbox     SADA-Hareesh-Mannaru-sandbox    
+  485   sys-12114016301481910531786695   TAM Tracker Updater             
+  486   realestate-chatbot-demo          realestate-chatbot-demo         
+  487   sada-manojs-new                  sada-manojs-new                 
+  488   sada-prod-sa-sow-tool            sada-prod-sa-sow-tool           
+  489   kunal-gcp-demoinstance           Kunal-GCP-DemoInstance          
+  490   james-sirchia-sandbox            james-sirchia-sandbox           
+  491   smec-chatbot                     smec-chatbot                    
+  492   corporate-security-sandbox       corporate-security-sandbox      
+  493   sada-jatencio-sandbox-service    sada-jatencio-sandbox-service   
+  494   sada-jatencio-sandbox-host       sada-jatencio-sandbox-host      
+  495   robin-new-test-002               robin-new-test-002              
+  496   kenneth-lee-nonprod-sandbox      kenneth-lee-nonprod-sandbox     
+  497   rteller-demo-host-bbbb-341117    rteller-demo-host-bbbb          
+  498   acg-map-services-prod             acg-map-services-prod          
+  499   acg-map-services-uat              acg-map-services-uat           
+  500   ce-training-340917               CE Training                     
+  501   sada-kellielaflamme-sandbox      SADA kellielaflamme sandbox     
+  502   kfietsam-sandbox-test1           kfietsam-sandbox test1          
+  503   sada-lucidlink-prod              sada-lucidlink-prod             
+  504   sada-srini-tf                    sada-srini-tf                   
+  505   prabha-sandbox                   Prabha-sandbox                  
+  506   sys-43803914149790663037861521   TAM Tracker Updater             
+  507   sys-89717531712137142561304872   TAM Tracker Updater             
+  508   john-arias-sandbox               john-arias-sandbox              
+  509   james-patten-finops              james-patten-finops             
+  510   montoya-24047                    montoya-24047                   
+  511   dataplatformfoundation-demo1     DataPlatformFoundation-demo1    
+  512   coordinate-oklahoma              coordinate-oklahoma             
+  513   sys-60798839615338647250482485   Refresh Application             
+  514   jeremy-jones-project             jeremy-jones-project            
+  515   jt-shoupe-dev2                   jt-shoupe-dev2                  
+  516   bizopsautomation                 BizOpsAutomation                
+  517   carbyne911-mediatranslserv-poc   carbyne911-mediatranslserv-poc  
+  518   liveagent-support-chatbot        LiveAgent-Support-Chatbot       
+  519   sys-02211009100016897221013114   TAM Tracker Updater             
+  520   mikias-project                   mikias-project                  
+  521   elena-lupascu-sandbox            elena-lupascu-sandbox           
+  522   sys-12537490132398987529291586   TAM Tracker Updater             
+  523   movius-maip-proto                movius-maip-proto               
+  524   corporate-itsec-non-prod         Corporate ITSec - Non Prod      
+  525   sandbox-jeremy-2-337117          sandbox-jeremy-2                
+  526   sebastian-fondbertasse-sandbox   sebastian-fondbertasse-sandbox  
+  527   account-termination              account-termination             
+  528   sada-ebisong                     sada-ebisong                    
+  529   ace-acg-maps-api-dev             ace-acg-maps-api-dev            
+  530   external-sada-bqml-demo          external-sada-bqml-demo         
+  531   cam-monitoring-workspace         cam-monitoring-workspace        
+  532   forrest-sandbox-334318           forrest-sandbox                 
+  533   sada-gna                         sada-gna                        
+  534   sada-prj-carbon-analysis         sada-prj-carbon-analysis        
+  535   sada-connectwise-prod            SADA-ConnectWise-Prod           
+  536   sada-odrd-demo                   sada-odrd-demo                  
+  537   sada-odrd-dev                    sada-odrd-dev                   
+  538   sada-vpc-host-prod               SADA-VPC-Host-Prod              
+  539   corp-gcp-billing                 corp-gcp-billing                
+  540   sys-12199919039972252903712623   Fetch GCP Pricing  FinOps       
+  541   wojo-sandbox-332519              wojo-sandbox                    
+  542   sada-anthos-lab-01               sada-anthos-lab-01              
+  543   sada-chatbots-odo                sada-chatbots-odo               
+  544   jeremy-billing-alerts            jeremy-billing-alerts           
+  545   sada-ess-gcpdiag-tool            SADA ESS GCPDIAG TOOL           
+  546   lq-anthos-lab-02                 lq-anthos-lab-02                
+  547   jonm-gcp-project-demo1           jonm-gcp-project-demo1          
+  548   sada-tams-ramp-automation        sada-tams-ramp-automation       
+  549   sada-kumar-dev                   sada-kumar-dev                  
+  550   trans-sunset-331615              courseproject                   
+  551   corp-licensealerts               corp-licenseAlerts              
+  552   sada-marketplace-demo            sada-marketplace-demo           
+  553   gke-storage-test                 GKE Storage Test                
+  554   sys-63829937879169066222007662   TAM Tracker Updater             
+  555   brave-framework-330423           CBC-GoogleChatLiveAgent         
+  556   terraform-cloudsearch-docai      terraform-cloudsearch-docai     
+  557   imde-backbone                    imde-backbone                   
+  558   veyo-agentassist-demo            Veyo-AgentAssist-Demo           
+  559   woodard-sandbox-2                woodard-sandbox-2               
+  560   sada-jgerhart-sandbox            SADA-JGerhart-Sandbox           
+  561   sada-content-warehouse           sada-content-warehouse          
+  562   sys-30236226971346278975574502   TAM Tracker Updater             
+  563   sada-anthos-world                sada-anthos-world               
+  564   sys-90187156532138785361434432   TAM Tracker Updater             
+  565   eric-iam-conditions-test         eric-iam-conditions-test        
+  566   jluna-sada                       Jluna-sada                      
+  567   sys-17755528607968712241952669   TAM Tracker Updater             
+  568   bigquery-sada                    bigquery-sada                   
+  569   jt-shoupe-dev                    jt-shoupe-dev                   
+  570   prj-sadasola-sec-cuevas-x-2010   Sandbox for Chris Cuevas        
+  571   corp-skyrise-dev                 DEV - EDW - Project Skyrise     
+  572   prj-sada-logging-ops-p-1941      Corp Logging Ops - Prod Env     
+  573   corp-skyrise                     SADA EDW - Project Skyrise      
+  574   gannett-ind-recai                gannett-ind-recai               
+  575   sada-jatencio-sandbox            sada-jatencio-sandbox           
+  576   test-drone-items                 Test-Drone-items                
+  577   external-eb-aiml-demo            external-eb-aiml-demo           
+  578   minabehnam-sada-dev              minabehnam-sada-dev             
+  579   sys-04077820639048714573993311   TAM Tracker Updater             
+  580   gannett-usatoday-recai           gannett-usatoday-recai          
+  581   sada-srikanth-mergu-spoke        sada-srikanth-mergu-spoke       
+  582   sada-srikanth-mergu-hub          sada-srikanth-mergu-hub         
+  583   rteller-demo-host-bbbb           rteller-demo-host-bbbb          
+  584   sam-gke-sandbox                  sam-gke-sandbox                 
+  585   sada-chouse-dev02                sada-chouse-dev02               
+  586   xm-ops                           xm-ops                          
+  587   kraken-poc-323417                kraken-poc                      
+  588   sys-04298688879339999501603700   TAM Tracker Updater             
+  589   bq-for-fun                       bq-for-fun                      
+  590   sada-chouse-dev01                sada-chouse-dev01               
+  591   sada-vinita-service-sandbox      sada-vinita-service-sandbox     
+  592   sada-vinita-host-sandbox         sada-vinita-host-sandbox        
+  593   robin-projecttest                robin-projecttest               
+  594   tam-monitoring-workspace         tam-monitoring-workspace        
+  595   stacy-veronneau-sandbox          stacy-veronneau-sandbox         
+  596   opportunity-deal-sheet           Opportunity Deal Sheet          
+  597   sada-jonchen-dev                 sada-jonchen-dev                
+  598   cloudm-archive-demo-322421       gps-images                      
+  599   kens-monitoring-workspace        kens-monitoring-workspace       
+  600   covid19-healthcare-chatbot       Covid19-Healthcare-Chatbot      
+  601   single-bonus-322119              wattsmd-monitoring-workspace    
+  602   elenasanchez                     ElenaSanchez                    
+  603   alexander-dev-322008             alexander-dev                   
+  604   pricing-export-10-percent        Pricing export 10 Percent       
+  605   joebonomo-sada-dev               joebonomo-sada-dev              
+  606   sada-seismic                     SADA-Seismic                    
+  607   automl-ce-demo                   AutoML CE Demo                  
+  608   sada-cloud-armor-demo-the-2nd    sada-cloud-armor-demo-the-2nd   
+  609   sada-virtual-scheduler           sada-virtual-scheduler          
+  610   sys-42214154378751109681718100   TAM Tracker Updater             
+  611   sada-arthur-dev                  sada-arthur-dev                 
+  612   sada-ce-shared-billing           sada-ce-shared-billing          
+  613   sada-1password-scim-bridge       SADA-1Password-SCIM-bridge      
+  614   ken-sada-new-hire1               Ken Garcia SADA                 
+  615   ruhan-gke-sandbox                ruhan-gke-sandbox               
+  616   godaddy-chatbot-demo             GoDaddy-Chatbot-Demo            
+  617   kimzilla                         kimzilla                        
+  618   sys-85357330107369084172929119   Review Checklist - Cloud Secur  
+  619   sys-96127336185321678512787455   Review Checklist - Cloud Secur  
+  620   project-big-data-007             Project Big Data                
+  621   sys-12535325472702664048831504   TAM Tracker Updater             
+  622   gannett-recai-dev                Gannett-RecAI-Dev               
+  623   wattsmd-monitoring-workspace     wattsmd-monitoring-workspace    
+  624   tanya-sandbox                    sada-tanya-leung                
+  625   wattsmd-billing-tracking         wattsmd-billing-tracking        
+  626   sys-22714817632159757128438525   Review Checklist - Cloud Secur  
+  627   sys-84058579594003776684150188   Review Checklist - Cloud Secur  
+  628   sys-66614997608283497874717413   Review Checklist - Cloud Secur  
+  629   sys-89562181689102254253861754   Review Checklist - Cloud Secur  
+  630   sys-60266835938679850828406386   Review Checklist - Cloud Secur  
+  631   sys-22848339541004114522044007   Review Checklist - Cloud Secur  
+  632   sys-92145308586737864745003048   scs-sadasystems                 
+  633   sys-54587940399866893993470656   Review Checklist - Cloud Secur  
+  634   sys-18983770737509418102205115   TAM Tracker Updater             
+  635   woodardbox                       woodardbox                      
+  636   sada-security-scs                sada-security-scs               
+  637   dev-host-project-memx            Dev Host Project MEMX           
+  638   connectivity-hub-project-memx    Connectivity HUB Project Memx   
+  639   prj-sada-edw-ops-d-1297          Corp EDW Cloud Ops - Dev Env    
+  640   sada-msp-dev-2                   HGE MSP DEV 2                   
+  641   sys-72555291835496142732510807   Steve's CUD Analysis Template   
+  642   sys-21227396839930049841732741   TAM Tracker Updater             
+  643   lq-sada-kms-demo                 lq-sada-kms-demo                
+  644   sys-17764113855433703606823954   Steve's CUD Analysis Template   
+  645   sys-68093567516773908293917606   Steve's CUD Analysis Template   
+  646   sada-mpietruszka-dev             sada-mpietruszka-dev            
+  647   vault-test-312618                vault-test                      
+  648   sys-57580044754685439606503035   TAM Tracker Updater             
+  649   sys-52563925235621502777351507   TAM Tracker Updater             
+  650   sys-72059644681702980315627459   Steve's CUD Analysis Template   
+  651   sys-87668387900028985512567449   Steve's CUD Analysis Template   
+  652   sys-14007692041731860460044492   Steve's CUD Analysis Template   
+  653   sys-68671129787161075428333184   TAM Tracker Updater             
+  654   sada-public                      sada-public                     
+  655   sys-55541566332265208258350880   BQML Forecasting from Google S  
+  656   sys-71952226897429728613106054   Steve's CUD Analysis Template   
+  657   sada-san-thongprasert-dev        sada-san-thongprasert-dev       
+  658   sada-docai                       sada-docai                      
+  659   kunal-testproj                   kunal-testproj                  
+  660   cardiovascular-chatbot-demo      Cardiovascular-Chatbot-Demo     
+  661   sys-28564997898753438732945850   Refresh Application             
+  662   prj-sada-edw-cloudbuild-d-1297   Corp EDW Cloud Build - Dev Env  
+  663   rteller-demo-svc-cccc            rteller-demo-svc-cccc           
+  664   rteller-demo-svc-bbbb            rteller-demo-svc-bbbb           
+  665   rteller-demo-svc-aaaa            rteller-demo-svc-aaaa           
+  666   rteller-demo-host-aaaa           rteller-demo-host-aaaa          
+  667   wattsmd-svc-project              wattsmd-svc-project             
+  668   wattsmd-host-project             wattsmd-host-project            
+  669   sys-16401467746086051912957255   TAM Tracker Updater             
+  670   sada-sa-apigee-dev               sada-sa-apigee-dev              
+  671   ruhan-rebuilda                   ruhan-rebuilda                  
+  672   sada-steve-post-sandbox          SADA Steve Post Sandbox         
+  673   sada-jordan-sandbox              sada-jordan-sandbox             
+  674   sys-02546626936016309399815103   Colgate BQ Test Template        
+  675   sada-brian-suk-sandbox           sada-brian-suk                  
+  676   sys-02846435045690575836086626   BQML Forecasting from Google S  
+  677   sys-79645131838671230419172739   BQML Forecasting from Google S  
+  678   logging-307816                   Logging                         
+  679   sada-vinita-sandbox              SADA Vinita Sandbox             
+  680   cartersdemo                      CartersDemo                     
+  681   sys-67048527041769268764634070   Refresh Application             
+  682   sys-38201452759178859949474623   TAM Tracker Updater             
+  683   sys-35902129974179877465260530   TAM Tracker Updater             
+  684   hydroottawa-chatbot-demo         HydroOttawa-Chatbot-Demo        
+  685   sada-retail-search               sada-retail-search              
+  686   sys-61317407667281821125390417   TAM Tracker Updater             
+  687   aitutor-dev                      aitutor-dev                     
+  688   sadasola-gurdeep                 sadasola-gurdeep                
+  689   sada-subash                      sada-subash                     
+  690   sadasola-tcabrera                sadasola-tcabrera               
+  691   sadasola-waap                    sadasola-waap                   
+  692   sada-takitocabrera-dev           sada-takitocabrera-dev          
+  693   sada-alokgupta-dev               SADA-AlokGupta-Dev              
+  694   sada-dc-prod                     SADA-DC-Prod                    
+  695   sada-project-cleanup-dev         SADA project-cleanup dev        
+  696   sada-business-operations         sada-business-operations        
+  697   konventus                        konventus                       
+  698   acquiremedia                     acquiremedia                    
+  699   cloudsql2bq-replication          CloudSQL2BQ replication         
+  700   sys-17201860695244623928801776   TAM Tracker Updater             
+  701   crux-pdfparsertobq-poc           Crux-PDFParserToBQ-POC          
+  702   sam-sts-api-test                 sam-sts-api-test                
+  703   jorge-testbox                    jorge-testbox                   
+  704   sys-98894504240366908607660013   TAM Tracker Updater             
+  705   sada-sbengani-sre                sada-sbengani-sre               
+  706   sys-83764772597623278972549777   TAM Tracker Updater             
+  707   taylor-skunkwork                 taylor-skunkwork                
+  708   kevin-dash-connector-gateway     kevin-dash-connector-gateway    
+  709   sys-91731863614838760489527487   Refresh Application             
+  710   sys-13733708308354445906576016   TAM Tracker Updater             
+  711   sada-srikanth-mergu              sada-srikanth-mergu             
+  712   sada-gautam                      sada-gautam                     
+  713   sada-prakash                     sada-prakash                    
+  714   sada-bliegl                      sada-bliegl                     
+  715   sys-76754031282304549968827485   TAM Tracker Updater             
+  716   sys-20503737081036836983744896   TAM Tracker Updater             
+  717   sada-borisk-sbx                  sada-borisk-sbx                 
+  718   jono-sandbox-297422              Jono Sandbox                    
+  719   elena-sandbox                    Elena Sandbox                   
+  720   sada-manojs-hst                  sada-manojs-hst                 
+  721   sada-manojs22                    sada-manojs22                   
+  722   sada-aaron-brock                 sada-aaron-brock                
+  723   sada-msp-dev                     HGE MSP DEV                     
+  724   sada-birm                        sada-birm                       
+  725   newsadaproject2343               NewSadaproject2343              
+  726   sys-14998160385840075304398060   TAM Tracker Updater             
+  727   asfar-test-295218                Asfar-sandbox                   
+  728   sada-sbengani-sbx                sada-sbengani-sbx               
+  729   sd-proj-3                        sd-proj-3                       
+  730   sada-ankit                       Sada-ankit                      
+  731   bq-omni-test                     BQ OMNI Test                    
+  732   sys-74893436648453213249069966   TAM Tracker Updater             
+  733   epic-orchestrate-dev             EPIC Orchestrate Dev            
+  734   sada-sam-njoku                   sada-sam-njoku                  
+  735   arizona-des                      arizona-des                     
+  736   sys-17791673569539715073975662   TAM Tracker Updater             
+  737   unreal-edu-orchestrate           Unreal EDU Orchestrate          
+  738   pmvland                          sada-peter-mark-verwoerd        
+  739   bigslots-test                    BigSlots-test                   
+  740   sada-nuno-test                   sada-nuno-test                  
+  741   groovy-root-290302               My Project 61057                
+  742   sada-ravi-sp1                    sada-ravi-sp1                   
+  743   sada-ravi-host                   sada-ravi-host                  
+  744   sys-69578181522885146773030805   TAM Tracker Updater             
+  745   unreal-edu-provisioning-dev      Unreal EDU Provisioning DEV     
+  746   sada-trellotobigquery-prod       SADA TrelloToBigQuery Prod      
+  747   sys-81283761402838311388568683   NetSuite Load Dev               
+  748   sada-ravi-dev                    sada-ravi-dev                   
+  749   sys-58058684124929437921407537   TAM Tracker Updater             
+  750   gps-sheets-highlightduplicates   gps-sheets-highlightduplicates  
+  751   sys-30140432407755784139844331   TAM Tracker Updater             
+  752   sd-proj-1                        sd-proj-1                       
+  753   meet-for-x                       meet-for-x                      
+  754   five-percent-console-billing     five-percent-console-billing    
+  755   sys-83835238467296110176330391   TAM Tracker Updater             
+  756   sys-68166182038579855427313949   TAM Tracker Updater             
+  757   sys-88224246561523802058908775   TAM Tracker Updater             
+  758   sys-45203201439266072627400958   TAM Tracker Updater             
+  759   sada-internal-services           SADA Internal Services          
+  760   sys-58119472027565549945831526   Netsuite Pipeline Timeseries    
+  761   doordash-ccai-dev                DoorDash CCAI Dev               
+  762   sys-48692354630730983251315309   TAM Tracker Updater             
+  763   sys-92167312936770967925364345   TAM Tracker Updater             
+  764   sys-92163433849664489012899696   CIFL Agency Data Pipeline       
+  765   sys-81596784585477734519198383   TAM Tracker Updater             
+  766   original-glyph-272223            BigQuery-GCP-Project            
+  767   sys-23185792200824328260588225   TAM Tracker Updater             
+  768   sada-prod-bq-logs                SADA-Prod-BQ-logs               
+  769   sys-69797124241706032918674166   CPE Data Move                   
+  770   sada-corp-prod-servicenow        SADA-Corp-Prod-ServiceNow       
+  771   sys-72406702247236169753775454   Recorded Macros  Untitled spre  
+  772   sys-54763557262293084106665810   New Registration Implement      
+  773   ccai-demo-603f0                  CCAI-Demo                       
+  774   platinum-snow-264420             checkoutuinodeweb               
+  775   cnect-shared-cost-sidewalk-dev   cnect-shared-cost-sidewalk-dev  
+  776   coordinate-detroit               coordinate-detroit              
+  777   shared-cost-sidewalk             cnect-shared-cost-sidewalk      
+  778   sys-94682435992076993090643959   TAM Tracker Updater             
+  779   sys-93726722900241455063884123   TAM Tracker Updater             
+  780   svdp-sandbox                     svdp-sandbox                    
+  781   aconnect-prod                    AConnect Prod                   
+  782   lyrical-star-255216              PayPal Store Locator            
+  783   sada-cpe-ames-sandbox-1          sada-cpe-ames-sandbox-1         
+  784   coordinate-sanfrancisco          coordinate-sanfrancisco         
+  785   cmreportgenerator                cmReportGenerator               
+  786   sys-67330120311808100108751553   GCP Monthly Spend               
+  787   sys-95738120178301288808095648   TAM Tracker Updater             
+  788   coordinate-sandiego              coordinate-sandiego             
+  789   change-case-248616               Change Case                     
+  790   sada-colin-dietrich              sada-colin-dietrich             
+  791   sada-new-msp-10                  SADA-New-MSP-10                 
+  792   heather-sandbox                  Heather Sandbox                 
+  793   sada-go-app                      SADA Go Redirect App            
+  794   coordinate-indianapolis          coordinate-indianapolis         
+  795   coordinate-sada                  coordinate-sada                 
+  796   splitter-240716                  Splitter                        
+  797   coordinate-seattle               coordinate-seattle              
+  798   coordinate-boston                coordinate-boston               
+  799   aconnect-staging                 aconnect-staging                
+  800   aconnect-qa                      aconnect-qa                     
+  801   aconnect-dev                     aconnect-dev                    
+  802   anesthesia-connect               Anesthesia Connect              
+  803   anesthesia-connect-qa            Anesthesia Connect QA           
+  804   nordstrom-maps-api-project       Nordstrom Maps API Project      
+  805   jsj-dev-235216                   jsj-dev                         
+  806   sada-aconnect                    SADA AConnect                   
+  807   publicdot                        publicdot                       
+  808   ess-sada                         SADA-ESS-Dev-Stackdriver        
+  809   elcaminohospital                 ElCaminoHospital                
+  810   tonyapps-224121                  TonyApps                        
+  811   bergelectric-dev-test            bergelectric-dev-test           
+  812   goatomwebsite                    GoAtomWebsite                   
+  813   import-export-220520             Import-Export                   
+  814   vote-la                          vote-la                         
+  815   sada-pstest-08132018             SADA-PSTest-08132018            
+  816   sada-slava-maslennikov           sada-slava-maslennikov          
+  817   gps-powerbi                      gps-datastudio                  
+  818   visiontest-191300                VisionTest                      
+  819   ess-test-187417                  SADA-ESS-Dev-Test               
+  820   hunterdon-bvi                    hunterdon-bvi                   
+  821   pcf-web-service                  pcf-web-service                 
+  822   pepsi-web-service                pepsi-web-service               
+  823   cambridgehealthalliance-bvi      CambridgeHealthAlliance -BVI    
+  824   berg-project-automation          berg-project-automation         
+  825   charlie-enterpriselogs           Charlie-enterpriseLogs          
+  826   seattle-dotmaps                  seattle-dotmaps                 
+  827   dot-maps-dev                     dot-maps-dev                    
+  828   reeses-eggs-locator-dev          reeses-eggs-locator-dev         
+  829   cce-surveyor-script-runner       CCE Surveyor Script Runner      
+  830   jfrog-artifactory-oauth-sada     JFrog Artifactory OAuth SADA    
+  831   sada-atom                        Atom                            
+  832   dotmap-boston-demo               dotmap-boston-demo              
+  833   berg-disconnected-147521         berg-disconnected               
+  834   sada-gcp-gold-support            sada-gcp-gold-support           
+  835   kelly-machines                   GPS Workspace Machines          
+  836   aaa-maps-test-1230               aaa-maps-test                   
+  837   nicky-sandbox                    nicky-sandbox                   
+  838   aaa-maps-uat                     aaa-maps-uat                    
+  839   cna-maps                         CNA Maps                        
+  840   cna-maps-staging                 CNA Maps Staging                
+  841   aaa-maps                         aaa-maps                        
+  842   codot-1079                       codot                           
+  843   bigtexmap                        bigtexmap                       
+  844   cdotmap-staging                  cdotmap-staging                 
+  845   cdotmap-test                     cdotmap-test                    
+  846   cdotmap                          cdotmap                         
+  847   justinsandbox                    justinsandbox                   
+Found multiple projects. Please enter a selection for 
+which should be the default, or leave blank to not 
+set a default.
+
+Enter a selection (1 - 847): 
+BigQuery configuration complete! Type "bq" to get started.
+
+Invalid identifier 'md-olc' for mk.
