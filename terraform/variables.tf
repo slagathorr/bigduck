@@ -10,5 +10,5 @@ variable "var_md_svc_token" {
 
 variable "var_region"{
     description = "Default region"
-    default = "us-central1-a"
+    default = "us-central1"
 }
