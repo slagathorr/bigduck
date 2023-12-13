@@ -7,3 +7,9 @@
     description = "Remote connection for Cloud Run v2 functions."
     cloud_resource {}
 }
+
+resource "google_bigquery_dataset" "function_library" {
+  dataset_id                 = "function_library_${random_id.instance_id.hex}"
+  location                   = "US"
+  project                    = var.var_gcp_project_id
+}

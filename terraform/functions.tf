@@ -44,4 +44,6 @@ resource "google_cloudfunctions2_function" "gcf-md-query" {
       version = "latest"
     }
   }
+
+  depends_on = [google_secret_manager_secret_iam_binding.md-token-secret-iam-binding]
 }
