@@ -6,4 +6,4 @@
     location = "US"
     description = "Remote connection for Cloud Run v2 functions."
     cloud_resource {}
-}        
+}
