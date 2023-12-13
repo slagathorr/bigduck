@@ -45,5 +45,9 @@ resource "google_cloudfunctions2_function" "gcf-md-query" {
     }
   }
 
-  depends_on = [google_secret_manager_secret_iam_binding.md-token-secret-iam-binding]
+  depends_on = [google_secret_manager_secret_iam_binding.md-token-secret-iam-binding,
+    google_project_service.cloudfunctions,
+    google_project_service.bqc,
+    google_project_service.run,
+    google_project_service.build]
 }
