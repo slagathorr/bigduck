@@ -33,8 +33,15 @@ resource "google_cloudfunctions2_function" "gcf-md-query" {
 
   service_config {
     max_instance_count = 1
-    available_memory   = "256M"
+    available_memory   = "512M"
     timeout_seconds    = 60
+
+    secret_environment_variables {
+      key     = "md-svc-token"
+      project_id = var.var_gcp_project_id
+      secret  = google_secret_manager_secret.md-svc-token.secret_id
+      version = "latest"
+    }
   }
 }
 
