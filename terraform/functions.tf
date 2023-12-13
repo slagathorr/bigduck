@@ -35,6 +35,7 @@ resource "google_cloudfunctions2_function" "gcf-md-query" {
     max_instance_count = 1
     available_memory   = "512M"
     timeout_seconds    = 60
+    service_account_email = google_service_account.sa-cloudrun-md.email
 
     secret_environment_variables {
       key     = "md-svc-token"
